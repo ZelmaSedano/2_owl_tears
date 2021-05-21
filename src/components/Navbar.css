@@ -1,0 +1,145 @@
+/* Navbar-wrapper */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  left: 0;
+
+  background: #ffe091;
+  height: 100vh;
+  width: 180px;
+
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 2rem;
+
+  color: #86613e;
+}
+
+.header-wrapper {
+  margin-top: 20px;
+}
+
+/* Owl Tears Text */
+.nav-logo {
+  text-decoration: none;
+  color: #86613e;
+  font-size: 60px;
+  font-weight: lighter;
+  font-family: 'Amatic SC';
+}
+
+.hamburger {
+  display: none;
+}
+
+/* holds nav menu - grid system */
+.menu {
+  /* layout of menu changes from grid to flex */
+  display: flex;
+  flex-direction: column;
+  /* allows menu to hover over main content of page - without this it would PUSH the content down */
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin-top: 130px;
+}
+
+li.nav-item,
+li.last-nav-item {
+  list-style: none;
+  margin: 30px 0px 20px 0px;
+}
+
+/* <a> */
+.nav-link {
+  font-weight: lighter;
+  text-decoration: none;
+  padding: 10px 45px;
+  color: #4e331c;
+  transition: 0.3s all;
+}
+.nav-link:hover {
+  background-color: #f7d16f;
+  box-shadow: 0 5px 8px -6px #4e331c;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 650px) {
+  /* entire navbar's position is set to relative */
+
+  .navbar {
+    position: relative;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background: #ffe091;
+    color: #86613e;
+    padding: 0 2rem;
+    font-size: 2rem;
+  }
+
+  /* logo & hamburger float side by side */
+  .header-wrapper {
+    display: flex;
+    /* width needs to be 100% so they can float apart */
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center; /* centers vertically */
+  }
+
+  /* Menu Icon */
+  .hamburger {
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #805a38;
+  }
+
+  /* Container holding holding links */
+  .menu {
+    /* layout of menu changes from grid to flex */
+    display: flex;
+    flex-direction: column;
+    /* allows menu to hover over main content of page - without this it would PUSH the content down */
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    /* height of header */
+    top: 80px;
+    /* lets menu SLIDE in */
+    left: -100%;
+    margin-top: 0px;
+    transition: 0.5s all;
+  }
+
+  /* when value of State is true, this mobile menu becomes active and slides in */
+  .menu.active {
+    background: #ffe091;
+    left: 0;
+    padding-bottom: 0px 0px 20px 0px;
+  }
+
+  /* <li> */
+  .nav-item {
+    padding: 30px;
+  }
+  .last-nav-item {
+    /* extra padding at bottom */
+    padding: 30px 30px 60px 30px;
+  }
+  /* <a> */
+  .nav-link {
+    text-decoration: none;
+    transition: 0.3s all;
+    padding: 10px 50px;
+    border-radius: 25px;
+  }
+}
