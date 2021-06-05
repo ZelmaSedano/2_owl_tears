@@ -5,7 +5,13 @@
   font-family: 'Amatic SC';
 }
 
-body::before {
+/* rounds the edge of the gallery images */
+img {
+  border-radius: 15px;
+  padding: 5px;
+}
+
+/* body::before {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -16,8 +22,7 @@ body::before {
 
   background-image: url('./components/images/website_background.png');
   background-repeat: repeat;
-  /* background color that will be displayed while the background image is loading */
+  /* background color that will be displayed while the background image is loading 
   background-color: #9c6d67;
-  /* modify the color with filters */
   filter: grayscale(20%) contrast(30%) brightness(125%);
-}
+} */
